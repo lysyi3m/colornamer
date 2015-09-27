@@ -6,3 +6,6 @@
 * Add config option for output formatting (camel, snake, start or kebab cases)
 * Tune up error messages styling
 * Tiny refactoring
+
+## 0.2.1 - Config defaults fix
+* Fix config defaults
