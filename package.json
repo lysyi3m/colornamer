@@ -1,8 +1,8 @@
 {
   "name": "colorname",
   "main": "./lib/colorname",
-  "version": "0.0.1",
-  "description": "Helps you name colors in humanized form :)",
+  "version": "0.0.0",
+  "description": "Helps you name colors in more humanized way",
   "keywords": [
     "css",
     "color"
@@ -16,5 +16,6 @@
     "atom": ">=1.0.0 <2.0.0"
   },
   "dependencies": {
+    "atom-space-pen-views": "^2.1.0",
   }
 }
