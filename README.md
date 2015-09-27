@@ -1,4 +1,6 @@
 # Colornamer
+[![apm](https://img.shields.io/apm/dm/colornamer.svg)](https://atom.io/packages/colornamer)
+[![apm](https://img.shields.io/apm/v/colornamer.svg)]()
 
 Helps you to specify your color variables in more humanized way, based on [great collection](http://chir.ag/projects/ntc/) of over 1,5k named colors.
 
