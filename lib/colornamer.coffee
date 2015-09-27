@@ -1,13 +1,13 @@
 {CompositeDisposable} = require 'atom'
-ColornameInput        = require './colorname-input'
+ColornamerInput       = require './colornamer-input'
 
-module.exports = Colorname =
+module.exports = colornamer =
   activate: () ->
     @subscriptions = new CompositeDisposable
 
     @subscriptions.add atom.commands.add 'atom-workspace',
-      'colorname:toggle': =>
-        Input = new ColornameInput()
+      'colornamer:toggle': =>
+        Input = new ColornamerInput()
         Input.attach()
 
   deactivate: () ->

@@ -1,5 +1,15 @@
-# colorname package
+# Colornamer
 
-A short description of your package.
+Helps you to specify your color variables in more humanized way, based on [great collection](http://chir.ag/projects/ntc/) of over 1,5k named colors.
 
-![A screenshot of your package](https://f.cloud.github.com/assets/69169/2290250/c35d867a-a017-11e3-86be-cd7c5bf3ff9b.gif)
+## Install
+```
+$ apm install colornamer
+```
+or open Atom and go to Preferences > Install and search for `Colornamer` package
+
+
+## Use
+Hit `ctrl-alt-n` (mac) / `ctrl-shift-n` (win & linux) or search for `Colornamer` in the Command Palette.
+
+Colornamer accept following color formats: HEX, RGB, RGBa, HSL, HSLa

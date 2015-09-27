@@ -1,16 +1,16 @@
 {
-  "name": "colorname",
-  "main": "./lib/colorname",
+  "name": "colornamer",
+  "main": "./lib/colornamer",
   "version": "0.0.0",
-  "description": "Helps you name colors in more humanized way",
+  "description": "Helps you write color variables in more humanized way",
   "keywords": [
     "css",
     "color"
   ],
   "activationCommands": {
-    "atom-workspace": "colorname:toggle"
+    "atom-workspace": "colornamer:toggle"
   },
-  "repository": "https://github.com/atom/colorname",
+  "repository": "https://github.com/lysyi3m/colornamer",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"

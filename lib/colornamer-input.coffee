@@ -1,8 +1,8 @@
-ColornameDialog = require './colorname-dialog'
-tinycolor       = require 'tinycolor2'
-Namer           = require 'color-namer'
+ColornamerDialog = require './colornamer-dialog'
+tinycolor        = require 'tinycolor2'
+Namer            = require 'color-namer'
 
-module.exports = class ColornameInput extends ColornameDialog
+module.exports = class ColornamerInput extends ColornamerDialog
   color: null
 
   constructor: () ->

@@ -1,0 +1,9 @@
+'atom-workspace':
+  '.platform-darwin':
+    'cmd-alt-n': 'colornamer:toggle'
+
+  '.platform-win32':
+    'ctrl-shift-n': 'colornamer:toggle'
+
+  '.platform-linux':
+    'ctrl-shift-n': 'colornamer:toggle'

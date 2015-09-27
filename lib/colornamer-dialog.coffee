@@ -2,10 +2,10 @@
 
 module.exports = class Dialog extends View
   @content: ({prompt, placeholder} = {}) ->
-    @div class: 'colorname', =>
-      @label prompt, class: 'colorname__label icon', outlet: 'promptText'
+    @div class: 'colornamer', =>
+      @label prompt, class: 'colornamer__label icon', outlet: 'promptText'
       @subview 'miniEditor', new TextEditorView(mini: true, placeholderText: placeholder)
-      @div class: 'colorname__error-message error-message', outlet: 'errorMessage'
+      @div class: 'colornamer__error-message error-message', outlet: 'errorMessage'
 
   initialize: ({input, select, iconClass} = {}) ->
     @promptText.addClass(iconClass) if iconClass
@@ -14,7 +14,7 @@ module.exports = class Dialog extends View
       'core:cancel':  => @cancel()
     @miniEditor.on 'blur', => @close()
     @miniEditor.getModel().onDidChange => @showError()
-    @miniEditor.getModel().setText(input)
+    @miniEditor.getModel().setText(input) if input
 
     if select
       range = [[0, 0], [0, input.length]]
