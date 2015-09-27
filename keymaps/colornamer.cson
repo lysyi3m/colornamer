@@ -1,8 +1,8 @@
-'.platform-darwin':
+'.platform-darwin .editor':
   'cmd-alt-n': 'colornamer:show'
 
-'.platform-win32':
+'.platform-win32 .editor':
   'ctrl-shift-n': 'colornamer:show'
 
-'.platform-linux':
+'.platform-linux .editor':
   'ctrl-shift-n': 'colornamer:show'

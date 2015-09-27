@@ -9,3 +9,6 @@
 
 ## 0.2.1 - Config defaults fix
 * Fix config defaults
+
+## 0.2.2 - Keymaps scope fix
+* Fix keymaps scope to work only in editor's area (not on settings page, for example)
