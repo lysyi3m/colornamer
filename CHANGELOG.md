@@ -1,3 +1,8 @@
 ## 0.1.0 - First Release
 * Every feature added
 * Every bug fixed
+
+## 0.2.0 - Minor update with config option
+* Add config option for output formatting (camel, snake, start or kebab cases)
+* Tune up error messages styling
+* Tiny refactoring
