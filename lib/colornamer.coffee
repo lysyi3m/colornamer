@@ -10,13 +10,13 @@ module.exports =
       default: ''
       enum: ['', 'camelcase', 'snakecase', 'startcase', 'kebabcase']
 
-  activate: () ->
+  activate: =>
     @subscriptions = new CompositeDisposable
 
     @subscriptions.add atom.commands.add 'atom-workspace',
-      'colornamer:show': =>
+      'colornamer:show': ->
         Input = new ColornamerInput()
         Input.attach()
 
-  deactivate: () ->
+  deactivate: =>
     @subscriptions.dispose()

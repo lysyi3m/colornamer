@@ -20,8 +20,9 @@ module.exports = class Dialog extends View
       range = [[0, 0], [0, input.length]]
       @miniEditor.getModel().setSelectedBufferRange(range)
 
+
   attach: ->
-    @panel = atom.workspace.addModalPanel(item: this.element)
+    @panel = atom.workspace.addModalPanel(item: @element)
     @miniEditor.focus()
     @miniEditor.getModel().scrollToCursorPosition()
 

@@ -9,7 +9,7 @@ module.exports = class ColornamerInput extends ColornamerDialog
   initialPrompt: 'Enter your color:'
   successPrompt: 'Your awesome color name:'
 
-  constructor: () ->
+  constructor: ->
     selection = atom.workspace.getActiveTextEditor().getSelectedText()
     value = if selection && tinycolor(selection).isValid() then selection else ''
 
