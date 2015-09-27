@@ -1,8 +1,13 @@
-// The ui-variables file is provided by base themes provided by Atom.
-//
-// See https://github.com/atom/atom-dark-ui/blob/master/styles/ui-variables.less
-// for a full listing of what's available.
-@import "ui-variables";
+@import 'ui-variables';
 
 .colorname {
+  .colorname__label {
+    margin: 0;
+    padding: @component-padding;
+  }
+
+  .colorname__error-message {
+    padding: @component-padding;
+    color: @text-color-error;
+  }
 }
