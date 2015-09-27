@@ -7,9 +7,6 @@
     "css",
     "color"
   ],
-  "activationCommands": {
-    "atom-workspace": "colornamer:toggle"
-  },
   "repository": "https://github.com/lysyi3m/colornamer",
   "license": "MIT",
   "engines": {

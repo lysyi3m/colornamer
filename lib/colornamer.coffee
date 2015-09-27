@@ -6,7 +6,7 @@ module.exports = colornamer =
     @subscriptions = new CompositeDisposable
 
     @subscriptions.add atom.commands.add 'atom-workspace',
-      'colornamer:toggle': =>
+      'colornamer:show': =>
         Input = new ColornamerInput()
         Input.attach()
 

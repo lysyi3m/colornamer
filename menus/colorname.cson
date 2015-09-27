@@ -2,11 +2,11 @@
   {
     'label': 'Packages'
     'submenu': [
-      'label': 'Color Name'
+      'label': 'Color Namer'
       'submenu': [
         {
-          'label': 'Toggle'
-          'command': 'colorname:toggle'
+          'label': 'Show'
+          'command': 'colorname:show'
         }
       ]
     ]

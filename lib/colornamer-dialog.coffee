@@ -1,4 +1,4 @@
-{$, TextEditorView, View} = require 'atom-space-pen-views'
+{TextEditorView, View} = require 'atom-space-pen-views'
 
 module.exports = class Dialog extends View
   @content: ({prompt, placeholder} = {}) ->
