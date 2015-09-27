@@ -1,9 +1,11 @@
 ColornamerDialog = require './colornamer-dialog'
 tinycolor        = require 'tinycolor2'
 Namer            = require 'color-namer'
+_                = require 'lodash'
 
 module.exports = class ColornamerInput extends ColornamerDialog
   color: null
+  format: atom.config.get 'colornamer.format'
   initialPrompt: 'Enter your color:'
   successPrompt: 'Your awesome color name:'
 
@@ -18,15 +20,23 @@ module.exports = class ColornamerInput extends ColornamerDialog
       prompt: @initialPrompt
       iconClass: 'icon-arrow-right'
 
+  formatName: (text) ->
+    switch @format
+      when 'camelcase' then _.camelCase(text)
+      when 'snakecase' then _.snakeCase(text)
+      when 'startcase' then _.startCase(text)
+      when 'kebabcase' then _.kebabCase(text)
+      else text
+
   onConfirm: (text) ->
     if text && tinycolor(text).isValid() && text != @color
-      @color = Namer(text).ntc[0].name
+      @color = _.first(Namer(text).ntc).name
       @miniEditor.getModel().setText @color
       @promptText.addClass('icon-check')
       @promptText.text @successPrompt
 
     else if text && text == @color
-      atom.clipboard.write @color
+      atom.clipboard.write @formatName(@color)
       atom.notifications.addSuccess("Color name #{@color} was added to your clipboard!")
       @close()
 
