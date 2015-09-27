@@ -1,33 +1,14 @@
-ColornameView = require './colorname-view'
 {CompositeDisposable} = require 'atom'
+ColornameInput        = require './colorname-input'
 
 module.exports = Colorname =
-  colornameView: null
-  modalPanel: null
-  subscriptions: null
-
-  activate: (state) ->
-    @colornameView = new ColornameView(state.colornameViewState)
-    @modalPanel = atom.workspace.addModalPanel(item: @colornameView.getElement(), visible: false)
-
-    # Events subscribed to in atom's system can be easily cleaned up with a CompositeDisposable
+  activate: () ->
     @subscriptions = new CompositeDisposable
 
-    # Register command that toggles this view
-    @subscriptions.add atom.commands.add 'atom-workspace', 'colorname:toggle': => @toggle()
+    @subscriptions.add atom.commands.add 'atom-workspace',
+      'colorname:toggle': =>
+        Input = new ColornameInput()
+        Input.attach()
 
-  deactivate: ->
-    @modalPanel.destroy()
+  deactivate: () ->
     @subscriptions.dispose()
-    @colornameView.destroy()
-
-  serialize: ->
-    colornameViewState: @colornameView.serialize()
-
-  toggle: ->
-    console.log 'Colorname was toggled!'
-
-    if @modalPanel.isVisible()
-      @modalPanel.hide()
-    else
-      @modalPanel.show()
