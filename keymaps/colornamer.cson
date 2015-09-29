@@ -1,8 +1,8 @@
-'.platform-darwin .editor':
+'.platform-darwin atom-text-editor':
   'cmd-alt-n': 'colornamer:show'
 
-'.platform-win32 .editor':
+'.platform-win32 atom-text-editor':
   'ctrl-shift-n': 'colornamer:show'
 
-'.platform-linux .editor':
+'.platform-linux atom-text-editor':
   'ctrl-shift-n': 'colornamer:show'
