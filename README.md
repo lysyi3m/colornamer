@@ -12,7 +12,7 @@ $ apm install colornamer
 or open Atom and go to Preferences > Install and search for `Colornamer` package
 
 ## Use
-Hit `ctrl-alt-n` (mac) / `ctrl-shift-n` (win & linux) or search for `Colornamer` in the Command Palette.
+Hit `cmd-alt-n` (mac) / `ctrl-shift-n` (win & linux) or search for `Colornamer` in the Command Palette.
 
 ## Configs
 Colornamer supports output formatting in following styles:
