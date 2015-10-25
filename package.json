@@ -1,7 +1,7 @@
 {
   "name": "colornamer",
   "main": "./lib/colornamer",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Write your color variables in more humanized way",
   "keywords": [
     "css",
