@@ -1,6 +1,6 @@
 ColornamerDialog = require './colornamer-dialog'
+Ntc              = require './colornamer-ntc'
 tinycolor        = require 'tinycolor2'
-Namer            = require 'color-namer'
 CamelCase        = require 'lodash.camelcase'
 SnakeCase        = require 'lodash.snakecase'
 StartCase        = require 'lodash.startcase'
@@ -33,11 +33,11 @@ module.exports = class ColornamerInput extends ColornamerDialog
 
   onConfirm: (text) ->
     if text && tinycolor(text).isValid() && text != @color
-      @color = Namer(text).ntc[0].name
+      @color = Ntc(text)[0].name
       @miniEditor.getModel().setText @color
       @promptText.addClass('icon-check')
       @promptText.text @successPrompt
-      match = (100 - parseInt(Namer(text).ntc[0].distance))
+      match = (100 - parseFloat(Ntc(text)[0].distance)).toFixed(2)
       @matchText.text "Match: #{match}%"
 
     else if text && text == @color

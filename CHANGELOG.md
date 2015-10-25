@@ -16,6 +16,10 @@
 ## 0.2.3 - Update deprecated keymaps scope
 * Update deprecated keymaps scope. Replace old '.editor' tag selector with 'atom-text-editor'
 
-## 0.2.4 - Minor updates
+## 0.3.0 - Minor updates
 * Replace entire (heavy) lodash dependency with only required modules
-* Add result match indicator 
+* Add result match indicator
+
+## 0.3.1 - Core improvements
+* Replace third-party color formatter with local naming function
+* Fix match result format

@@ -14,7 +14,8 @@
   },
   "dependencies": {
     "atom-space-pen-views": "^2.1.0",
-    "color-namer": "^1.0.0",
+    "chroma-js": "^1.1.1",
+    "euclidean-distance": "^0.1.0",
     "lodash.camelcase": "^3.0.1",
     "lodash.kebabcase": "^3.0.1",
     "lodash.snakecase": "^3.0.1",
