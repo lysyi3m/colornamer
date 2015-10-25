@@ -1,9 +1,11 @@
 {TextEditorView, View} = require 'atom-space-pen-views'
 
 module.exports = class Dialog extends View
-  @content: ({prompt, placeholder} = {}) ->
+  @content: ({prompt, placeholder, match} = {}) ->
     @div class: 'colornamer', =>
-      @label prompt, class: 'colornamer__label icon', outlet: 'promptText'
+      @div class: 'colornamer__heading', =>
+        @span prompt, class: 'colornamer__heading-prompt icon', outlet: 'promptText'
+        @span class: 'colornamer__heading-match', outlet: 'matchText'
       @subview 'miniEditor', new TextEditorView(mini: true, placeholderText: placeholder)
       @div class: 'colornamer__error-message error-message', outlet: 'errorMessage'
 
@@ -19,7 +21,6 @@ module.exports = class Dialog extends View
     if select
       range = [[0, 0], [0, input.length]]
       @miniEditor.getModel().setSelectedBufferRange(range)
-
 
   attach: ->
     @panel = atom.workspace.addModalPanel(item: @element)

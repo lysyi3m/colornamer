@@ -1,14 +1,31 @@
 @import 'ui-variables';
 
 .colornamer{
-  .colornamer__label {
-    margin: 0;
+  .colornamer__heading {
     padding: @component-padding;
+
+    &:after {
+      display: table;
+      content: '';
+      clear: both;
+    }
+  }
+
+  .colornamer__heading-prompt {
+    float: left;
+    margin: 0;
+    padding: 0;
+    color: @text-color;
+  }
+
+  .colornamer__heading-match {
+    float: right;
+    color: @text-color-subtle;
   }
 
   .colornamer__error-message {
     display: none;
-    padding: @component-padding;
+    padding: 0 @component-padding @component-padding;
     color: @text-color-error;
   }
 }

@@ -2,7 +2,7 @@
   "name": "colornamer",
   "main": "./lib/colornamer",
   "version": "0.2.3",
-  "description": "Helps you write color variables in more humanized way",
+  "description": "Write your color variables in more humanized way",
   "keywords": [
     "css",
     "color"
@@ -15,7 +15,10 @@
   "dependencies": {
     "atom-space-pen-views": "^2.1.0",
     "color-namer": "^1.0.0",
-    "lodash": "^3.10.1",
+    "lodash.camelcase": "^3.0.1",
+    "lodash.kebabcase": "^3.0.1",
+    "lodash.snakecase": "^3.0.1",
+    "lodash.startcase": "^3.1.0",
     "tinycolor2": "^1.1.2"
   }
 }

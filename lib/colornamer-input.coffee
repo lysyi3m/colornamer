@@ -1,7 +1,10 @@
 ColornamerDialog = require './colornamer-dialog'
 tinycolor        = require 'tinycolor2'
 Namer            = require 'color-namer'
-_                = require 'lodash'
+CamelCase        = require 'lodash.camelcase'
+SnakeCase        = require 'lodash.snakecase'
+StartCase        = require 'lodash.startcase'
+KebabCase        = require 'lodash.kebabcase'
 
 module.exports = class ColornamerInput extends ColornamerDialog
   color: null
@@ -22,18 +25,20 @@ module.exports = class ColornamerInput extends ColornamerDialog
 
   formatName: (text) ->
     switch @format
-      when 'camelcase' then _.camelCase(text)
-      when 'snakecase' then _.snakeCase(text)
-      when 'startcase' then _.startCase(text)
-      when 'kebabcase' then _.kebabCase(text)
+      when 'camelcase' then CamelCase(text)
+      when 'snakecase' then SnakeCase(text)
+      when 'startcase' then StartCase(text)
+      when 'kebabcase' then KebabCase(text)
       else text
 
   onConfirm: (text) ->
     if text && tinycolor(text).isValid() && text != @color
-      @color = _.first(Namer(text).ntc).name
+      @color = Namer(text).ntc[0].name
       @miniEditor.getModel().setText @color
       @promptText.addClass('icon-check')
       @promptText.text @successPrompt
+      match = (100 - parseInt(Namer(text).ntc[0].distance))
+      @matchText.text "Match: #{match}%"
 
     else if text && text == @color
       atom.clipboard.write @formatName(@color)
@@ -44,4 +49,5 @@ module.exports = class ColornamerInput extends ColornamerDialog
       @color = null
       @promptText.removeClass('icon-check')
       @promptText.text @initialPrompt
+      @matchText.text ''
       @showError('You need to specify a valid color to get magic works')

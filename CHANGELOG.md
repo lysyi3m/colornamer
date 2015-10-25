@@ -15,3 +15,7 @@
 
 ## 0.2.3 - Update deprecated keymaps scope
 * Update deprecated keymaps scope. Replace old '.editor' tag selector with 'atom-text-editor'
+
+## 0.2.4 - Minor updates
+* Replace entire (heavy) lodash dependency with only required modules
+* Add result match indicator 
