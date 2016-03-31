@@ -2,7 +2,7 @@
 [![apm](https://img.shields.io/apm/v/colornamer.svg)]()
 [![apm](https://img.shields.io/apm/dm/colornamer.svg)](https://atom.io/packages/colornamer)
 
-![Screenshot](https://lysyi3m-pluto.s3.amazonaws.com/DxVRFMUh4j.gif)
+![Screenshot](https://lysyi3m-pluto.s3.amazonaws.com/dropshare/Screen-Recording-2016-03-31-02-27-52.gif)
 
 Helps you to specify your color variables in more humanized way, based on [great collection](http://chir.ag/projects/ntc/) of over 1,5k named colors.
 
